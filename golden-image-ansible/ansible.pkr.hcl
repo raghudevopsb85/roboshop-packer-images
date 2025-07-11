@@ -21,4 +21,12 @@ build {
   sources = [
     "source.amazon-ebs.rhel9_ansible"
   ]
+
+  provisioner "shell" {
+    inline = [
+      "sudo pip3.11 install ansible hvac"
+    ]
+  }
+
+
 }
