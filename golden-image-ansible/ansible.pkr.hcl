@@ -24,10 +24,11 @@ build {
 
   provisioner "shell" {
     inline = [
-      "sudo pip3.11 install ansible hvac"
+      "sudo pip3.11 install ansible hvac",
+      "ansible-pull -i localhost, -U https://github.com/raghudevopsb85/roboshop-packer-images.git main.yml"
     ]
   }
 
-
 }
+
 
