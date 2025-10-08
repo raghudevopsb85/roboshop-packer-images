@@ -1,6 +1,3 @@
-- name: Install SSM agent
-  ansible.builtin.shell: dnf install https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm -y
-
 - name: CVE-2023-51042 - kernel, kernel-tools-libs and 4 more
   ansible.builtin.dnf:
     state: latest
@@ -28,3 +25,6 @@
     - glibc-gconv-extra
     - glibc-common
     - glibc
+
+- name: Install SSM agent
+  ansible.builtin.shell: dnf install https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm -y
